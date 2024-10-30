@@ -29,3 +29,39 @@ function randInt(min, max) {
 }
 
 
+function user() {
+let age = Number(prompt("what is your age"))
+if (age >= 60) {
+    console.log(`You qualify for the senior discount!`)
+}
+
+if (age < 16) {
+    console.log(`You're not enough to drive yet`)
+
+}
+
+if (age == 44) {
+    console.log("So is Mr. Squirrel!")
+}
+
+let user_name = prompt("what is your name?")
+
+if (user_name == Mr. Squirrel) {
+    console.log("🐿️")
+}
+if (user_name.length > 7) {
+    console.log("You have a long name.")
+}
+
+let length = +(prompt("How many characters does your name have?"))
+if (length == user_name.length) {
+    console.log("That's correct! ✔️")
+}
+if (length > user_name.length) {
+    console.log("Too high ✖️")
+}
+
+if (length < user_name.length) {
+    console.log("Too low ✖️")
+}
+}
