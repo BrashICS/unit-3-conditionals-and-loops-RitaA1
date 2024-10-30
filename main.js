@@ -46,7 +46,7 @@ if (age == 44) {
 
 let user_name = prompt("what is your name?")
 
-if (user_name == Mr. Squirrel) {
+if (user_name == "Mr. Squirrel") {
     console.log("🐿️")
 }
 if (user_name.length > 7) {
@@ -65,3 +65,5 @@ if (length < user_name.length) {
     console.log("Too low ✖️")
 }
 }
+
+user()
