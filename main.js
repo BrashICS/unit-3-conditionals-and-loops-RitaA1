@@ -66,4 +66,49 @@ if (length < user_name.length) {
 }
 }
 
-user()
+
+// Spooky Game
+document.getElementById("start_game").addEventListener("click", startGame);
+
+function startGame() {
+let user_name = prompt("What is your name?")
+alert(`Welcome, ${user_name}, to Haunted St. Matthew HS!`)
+let choice = +prompt("Do you want to go into the (1) library or (2) basement?")
+if (choice == 1) {
+    library()
+}
+if (choice == 2) {
+    basement()
+}
+}
+
+function library() {
+    let option = +prompt("You see a creepy old book on a dusty table. Do you (1) open it or (2) leave it alone?")
+    
+    if (option == 1){
+        alert("A ghost emerges from the book and scares you to death!")
+        alert("The End. Thanks for Playing!")
+    }
+
+    if (option == 2) {
+        alert("You quietly leave the library and find the exit. You survive!")
+        alert("The End. Thanks for Playing!")
+    }
+
+}
+
+
+function basement() {
+    let option = +prompt("You hear strange noises. Do you (1) investigate or (2) run away?")
+    
+    if (option == 1){
+        alert("You discover a car trunk filled with candy!")
+        alert("The End. Thanks for Playing!")
+    }
+
+    if (option == 2) {
+        alert("You trip and fall... The ghost catches you!")
+        alert("The End. Thanks for Playing!")
+    }
+
+}
