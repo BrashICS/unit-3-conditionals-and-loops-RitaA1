@@ -4,14 +4,56 @@
 */
 
 /* Using font-size: larger to make things pop. Feel free to change. */
-body {
-    background-color:#36013F;
+/**
+html body {
     color: white;
-    margin: 30px;
     font-size: x-large;
 }
+**/
+/**
+html {
+    min-height: 100%; 
+    background-image: url("./image/spooky.jpg"); 
+    background-size: cover; 
+    background-repeat: no-repeat; 
+    background-position:  center; 
+    }
+**/
 
-h1 {
+html body{
+    height: 100%;
+    margin: 0;
+    text-align: center;
+
+
+}
+#bg {
+    position:absolute;
+    min-width:100%;
+    min-height: 100%; 
+    background-image: url("./image/spooky.jpg"); 
+    background-size: cover; 
+    background-repeat: no-repeat; 
+    background-position:  center; 
+
+}
+
+#start_game {
+    margin-top:23%;
+    padding-right: 10px;
+    border-radius: 0.8rem;
+    border-style: solid;
+    background: rgb(70, 54, 208);
+    border-color: black;
+    font-size: 40px;
+}
+
+#start_game:hover {
+    background: linear-gradient(to right,  rgb(10, 15, 45) 0%, rgb(70, 54, 208) 100%);
+
+}
+
+/**h1 {
     margin-bottom: 0;
     margin-left: 120px;
 }
@@ -24,4 +66,4 @@ h6 {
 h3 {
     text-decoration: underline;
     font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-}
+}**/
