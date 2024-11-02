@@ -79,7 +79,9 @@ if (choice == 1) {
     //   document.getElementById("bg").src="./image/library.jpg"
     image.style.backgroundImage = "url('./image/library.jpg')";
     image.style.backgroundRepeat = "no-repeat";
-    image.style.backgroundPosition = "center";
+    image.style.backgroundPosition = "center";  
+    // document.body.style.background = "url('./image/library.jpg')";
+
     library()
 }
 if (choice == 2) {
@@ -92,6 +94,7 @@ if(choice == 3) {
 }
 
 function continue_game() {
+
     let choice = +prompt("Do you want to go into the (1) library, (2) basement, or (3) Gymnasium?")
     if (choice == 1) {
         library()
