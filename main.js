@@ -76,11 +76,10 @@ alert(`Welcome, ${user_name}, to Haunted St. Matthew HS!`)
 let choice = +prompt("Do you want to go into the (1) library, (2) basement, or (3) Gymnasium?")
 if (choice == 1) {
     let image = document.getElementById("bg")
- //   document.getElementById("bg").src="./image/library.jpg"
+    //   document.getElementById("bg").src="./image/library.jpg"
     image.style.backgroundImage = "url('./image/library.jpg')";
     image.style.backgroundRepeat = "no-repeat";
     image.style.backgroundPosition = "center";
-
     library()
 }
 if (choice == 2) {
@@ -95,12 +94,6 @@ if(choice == 3) {
 function continue_game() {
     let choice = +prompt("Do you want to go into the (1) library, (2) basement, or (3) Gymnasium?")
     if (choice == 1) {
-        let image = document.getElementById("bg")
-     //   document.getElementById("bg").src="./image/library.jpg"
-        image.style.backgroundImage = "url('./image/library.jpg')";
-        image.style.backgroundRepeat = "no-repeat";
-        image.style.backgroundPosition = "center";
-    
         library()
     }
     if (choice == 2) {
@@ -219,6 +212,7 @@ function library() {
                 alert("You Failed To Escape!")
                 let cont = +prompt("Would you like to (1) continue or (2) leave?") 
                 if (cont == 1) {
+                    let image = document.getElementById("bg")
                     continue_game()
                 }
                 if (cont == 2) {
