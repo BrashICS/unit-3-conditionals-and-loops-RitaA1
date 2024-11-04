@@ -4,58 +4,12 @@
 */
 
 /* Using font-size: larger to make things pop. Feel free to change. */
-/**
-html body {
+/* html body {
     color: white;
     font-size: x-large;
 }
-**/
-/**
-html {
-    min-height: 100%; 
-    background-image: url("./image/spooky.jpg"); 
-    background-size: cover; 
-    background-repeat: no-repeat; 
-    background-position:  center; 
-    }
-**/
 
-html body{
-    height: 100%;
-    margin: 0;
-    text-align: center;
-
-
-}
-#bg {
-    position:absolute;
-    min-width:100%;
-    min-height: 100%; 
-    background-image: url("./image/spooky.jpg");  
-    background-size: cover; 
-    background-repeat: no-repeat; 
-    background-position:  center; 
-
-}
-
-#start_game {
-    margin-top:25%; 
-    padding-right: 10px;
-    border-radius: 0.8rem;
-    border-style: solid;
-    background: rgb(70, 54, 208);
-    border-color: black;
-    font-size: 40px;
-
-   
-}
-
-#start_game:hover {
-    background: linear-gradient(to right,  rgb(10, 15, 45) 0%, rgb(70, 54, 208) 100%);
-
-}
-
-/**h1 {
+h1 {
     margin-bottom: 0;
     margin-left: 120px;
 }
@@ -68,4 +22,48 @@ h6 {
 h3 {
     text-decoration: underline;
     font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-}**/
+} */
+
+
+html body{
+    height: 100%;
+    margin: 0;
+    text-align: center;
+
+
+}
+
+/* style for the background of the game. */
+#bg {
+    position:absolute;
+    min-width:100%;
+    min-height: 100%; 
+    background-image: url("./image/spooky.jpg");  
+    background-size: cover; 
+    background-repeat: no-repeat; 
+    background-position:  center; 
+}
+
+/*style for the title of the game */
+#title {
+    font-size: 70px;
+    margin-top:22%;
+    color: rgb(0, 0, 0); 
+}
+
+/* style for the start button of the game. */
+#start_game {
+    /**margin-top:25%; **/
+    padding-right: 10px;
+    border-radius: 0.8rem;
+    border-style: solid;
+    background: rgb(70, 54, 208);
+    border-color: black;
+    font-size: 32px;
+}
+
+#start_game:hover {
+    background: linear-gradient(to right,  rgb(10, 15, 45) 0%, rgb(70, 54, 208) 100%);
+
+}
+
