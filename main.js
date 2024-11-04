@@ -28,7 +28,7 @@ function randInt(min, max) {
     return Math.floor(Math.random() * (max - min + 1)) + min;
 }
 
-
+// if statements
 function user() {
 let age = Number(prompt("what is your age"))
 if (age >= 60) {
@@ -64,6 +64,109 @@ if (length > user_name.length) {
 if (length < user_name.length) {
     console.log("Too low ✖️")
 }
+}
+
+
+// else if statements
+
+// Setup the menu
+function menu() {
+    let message = `Hi! Please make a selection:
+    1 - Play
+    2 - Options
+    3 - DLC
+    4 - Check for Updates
+    5 - Exit
+    `
+    // Prompt with the menu
+    let selection = Number(prompt(message));
+
+    if (selection == 1) {
+        console.log(`Let's Play!`)
+        let level = +prompt("what level would you like to play? (1) Easy, (2) medium, or (3) hard?")
+        if (level == 1) {
+        console.log("You selected the easy route.")
+        }
+        else if (level == 2) {
+            console.log("Most people select medium.")
+        }
+        else if (level == 3) {
+            console.log("I see you like a challenge!")
+        }
+
+        else {
+            console.log("Select again!")
+            let selection = +prompt(`Select Again! ${message}`);
+            selection
+        } 
+    }
+
+    else if (selection == 2) {
+        console.log("You selected Options.")
+    }
+
+    else if (selection == 3) {
+        console.log("No new DLC at this time.")
+    }
+
+    else if (selection == 4) {
+        console.log("Everything is up to date.")
+    }
+
+    else if (selection == 5) {
+        console.log("Bye!")
+    }
+
+    else {
+        console.log("Select again!")
+        let selection = +prompt(`Select Again! ${message}`);
+        selection
+    }
+}
+
+
+function greeting(hour) {
+    if ((hour >= 0 ) && (hour <= 11)) {
+        return("Good morning!")
+    }
+
+    else if ((hour >= 12 ) && (hour <= 17)) {
+        return("Good afternoon!")
+    }
+
+    else if ((hour >= 18 ) && (hour <= 23)) {
+        return("Good evening!")
+    }
+
+    else {
+        return("Invalid hour!")
+    }
+
+}
+
+function two_digit() {
+    let value  = randInt(1, 10)
+    console.log(value)
+
+    if (value == 0) {
+        return("0")
+    }
+
+    if( value % 2 == 0) {
+        return("Even")
+    }
+
+    if (value % 2 != 0) {
+        return ("Odd")
+    }
+
+    if ((value % 2 == 0) && (value % 3 == 0)) {
+        return ("6")
+    }
+
+    if ( value % value == 0) {
+        return("Prime")
+    }
 }
 
 
@@ -412,3 +515,6 @@ function gymnasium() {
 
     }
 }
+
+
+
