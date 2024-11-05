@@ -13,6 +13,7 @@
 
 /*** Event Listeners ***/
 
+document.getElementById("guess").addEventListener("click", guess_10)
 
 
 /*** Functions ***/
@@ -168,6 +169,90 @@ function two_digit() {
         return("Prime")
     }
 }
+
+// else statement practice
+
+// Part one
+function is_number(num) {
+    if (typeof num == "number"){
+        return ("True")
+    }
+
+    else {
+        return("False")
+    }
+}
+
+
+//Part Two
+function which_day(n) {
+    if (is_number(n) == "number") {
+        if (n == 1) {
+            return(` "Sunday" `)
+        }
+
+        else if (n == 2) {
+            return(` "Monday" `)
+        }
+
+        else if (n == 3) {
+            return(` "Tuesday" `)
+        }
+
+        else if (n == 4) {
+            return(` "Wednesday" `)
+        }
+
+        else if (n == 5) {
+            return(` "Thursday" `)
+        }
+
+        else if (n == 6) {
+            return(` "Friday" `)
+        }
+
+        else if (n ==7) {
+            return(` "Saturday" `)
+        }
+
+        else {
+            return("Invalid value")
+        }
+    }
+
+    else {
+        return("Invalid type.")
+    }
+}
+
+
+//Part Three
+
+function guess_10() {
+    let rnd = randInt(1, 10)
+    let guess = +prompt("Select a number from 1 to 10")
+    
+    if (guess == rnd) {
+        alert("You Guessed The Correct Number")
+    }
+
+    else if ((guess < 1) || (guess > 10)) {
+        alert(`You guessed out of the range given, the hidden number was ${rnd}`)
+    }
+
+    else if ((guess > rnd) && (guess <= 10)) {
+        alert(`Your guess was too high. The correct number is ${rnd}`)
+    }
+
+    else if ((guess < rnd) && (guess >= 1)) {
+        alert(`Your guess was too low. The correct number is ${rnd}`)
+    }
+
+    else {
+        alert("There was an error!") 
+    }
+}
+
 
 
 /* Spooky Game */
