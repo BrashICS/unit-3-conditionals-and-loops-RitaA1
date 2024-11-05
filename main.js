@@ -186,7 +186,8 @@ function is_number(num) {
 
 //Part Two
 function which_day(n) {
-    if (is_number(n) == "number") {
+    
+    if (is_number(n)) {
         if (n == 1) {
             return(` "Sunday" `)
         }
