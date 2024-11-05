@@ -53,7 +53,6 @@ html body{
 
 /* style for the start button of the game. */
 #start_game {
-    /**margin-top:25%; **/
     padding-right: 10px;
     border-radius: 0.8rem;
     border-style: solid;
@@ -67,3 +66,15 @@ html body{
 
 }
 
+
+
+#guess {
+    margin-top: 2%;
+    padding-right: 10px;
+    border-radius: 0.8rem;
+    border-style: solid;
+    background: rgb(162, 54, 208);
+    border-color: black;
+    font-size: 16px;
+
+}
