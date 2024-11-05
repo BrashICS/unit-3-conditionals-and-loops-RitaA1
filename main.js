@@ -1,12 +1,12 @@
 /**
  * Unit 3 - Conditionals and Loops
  * ICS3 - Mr. Brash 🐿️
- * 
+ *
  * For this unit, Mr. Brash is trying something different. Each lesson will
  * be in this one repository, separated in the Lessons folder.
- * 
+ *
  * If you run into Git or Github issues, call Mr. Brash over.
- **/ 
+ **/
 
 
 'use strict';
@@ -98,7 +98,7 @@ function menu() {
             console.log("Select again!")
             let selection = +prompt(`Select Again! ${message}`);
             selection
-        } 
+        }
     }
 
     else if (selection == 2) {
@@ -186,10 +186,7 @@ function startGame() {
         image.style.backgroundImage = "url('./image/library.jpg')"
         image.style.backgroundRepeat = "no-repeat"
         image.style.backgroundPosition = "center"
-
-        //   document.getElementById("bg").src="./image/library.jpg"
-        // document.body.style.background = "url('./image/library.jpg')"
-        library()
+        setTimeout(() => library(), 100);
     }
 
     if (choice == 2) {
@@ -198,7 +195,7 @@ function startGame() {
         image.style.backgroundImage = "url('./image/basement.jpg')"
         image.style.backgroundRepeat = "no-repeat"
         image.style.backgroundPosition = "center"
-        basement()
+        setTimeout(() => basement(), 100);
     }
 
     if(choice == 3) {
@@ -207,7 +204,7 @@ function startGame() {
         image.style.backgroundImage = "url('./image/gym.webp')"
         image.style.backgroundRepeat = "no-repeat"
         image.style.backgroundPosition = "center"
-        gymnasium()
+        setTimeout(() => gymnasium(), 100);
     }
 }
 
@@ -219,14 +216,16 @@ function continue_game() {
     image.style.backgroundRepeat = "no-repeat"
     image.style.backgroundPosition = "center"
 
-    let choice = +prompt("Do you want to go into the (1) library, (2) basement, or (3) Gymnasium?")
+    let choice;
+
+    setTimeout(() => {choice = +prompt("Do you want to go into the (1) library, (2) basement, or (3) Gymnasium?")}, 100);
     if (choice == 1) {
         //background image for the library setting.
         let image = document.getElementById("bg")
         image.style.backgroundImage = "url('./image/library.jpg')"
         image.style.backgroundRepeat = "no-repeat"
         image.style.backgroundPosition = "center"
-        library()
+        setTimeout(() => library(), 100);
     }
     if (choice == 2) {
         //background image for the basement setting.
@@ -234,7 +233,7 @@ function continue_game() {
         image.style.backgroundImage = "url('./image/basement.jpg')"
         image.style.backgroundRepeat = "no-repeat"
         image.style.backgroundPosition = "center"
-        basement()
+        setTimeout(() => basement(), 100);
     }
     if(choice == 3) {
         //background image for the gymnasium setting.
@@ -242,22 +241,24 @@ function continue_game() {
         image.style.backgroundImage = "url('./image/gym.jpg')"
         image.style.backgroundRepeat = "no-repeat"
         image.style.backgroundPosition = "center"
-        gymnasium()
+        setTimeout(() => gymnasium(), 100);
     }
 }
 
 function library() {
+
+
     alert("Welcome To The Library!")
     alert("A Ghost Haunts This Library, find a way to escape without being killed by the ghost!")
     let option = +prompt("You see a creepy old book on a dusty table. Do you (1) open it or (2) leave it alone?")
-    
+
     if (option == 1){
         alert("You open the book and find a key inside.")
         let option2 = +prompt("You walk around and find a exit, but you see a ghost nearby. Do you (1) run to the exit or (2) hide till the ghost leaves?")
         if (option2 == 1) {
             alert("You run for the exit but the ghost spots you and you DIE.")
             alert("You Failed To Escape!")
-            let cont = +prompt("Would you like to (1) continue the game or (2) leave?") 
+            let cont = +prompt("Would you like to (1) continue the game or (2) leave?")
             if (cont == 1) {
                 continue_game()
             }
@@ -269,7 +270,7 @@ function library() {
         if (option2 == 2) {
             alert("The ghost leaves, you find your way to the exit and escape.")
             alert("You Survived The Library!")
-            let cont = +prompt("Would you like to (1) continue the game or (2) leave?") 
+            let cont = +prompt("Would you like to (1) continue the game or (2) leave?")
             if (cont == 1) {
                 continue_game()
             }
@@ -292,7 +293,7 @@ function library() {
             if (option4 == 1) {
                 alert("you find your way to the exit and you're able to escape.")
                 alert("You Survived The Library!")
-                let cont = +prompt("Would you like to (1) continue the game or (2) leave?") 
+                let cont = +prompt("Would you like to (1) continue the game or (2) leave?")
                 if (cont == 1) {
                     continue_game()
                 }
@@ -304,7 +305,7 @@ function library() {
                 alert("You pick the bottle and accidentally dropped it, alerting the ghost.")
                 alert("You run for the exit but the ghost spots you and you DIE.")
                 alert("You Failed To Escape!")
-                let cont = +prompt("Would you like to (1) continue the game or (2) leave?") 
+                let cont = +prompt("Would you like to (1) continue the game or (2) leave?")
                 if (cont == 1) {
                     continue_game()
                 }
@@ -319,7 +320,7 @@ function library() {
         if (option3 == 2) {
             alert("The ghost sees you and rushes towards you and you DIE.")
             alert("You Failed To Escape!")
-            let cont = +prompt("Would you like to (1) continue the game or (2) leave?") 
+            let cont = +prompt("Would you like to (1) continue the game or (2) leave?")
             if (cont == 1) {
                 continue_game()
             }
@@ -335,7 +336,7 @@ function library() {
             let answer = +prompt("Is it (1) a skull or (2) a candle?")
             if (answer == 1) {
                 alert("You solve the riddle and the door unlocks. You escape without alerting the ghost and survive.")
-                let cont = +prompt("Would you like to (1) continue the game or (2) leave?") 
+                let cont = +prompt("Would you like to (1) continue the game or (2) leave?")
                 if (cont == 1) {
                     continue_game()
                 }
@@ -348,7 +349,7 @@ function library() {
                 alert("You picked the wrong answer.")
                 alert("The ghost spots you and you DIE.")
                 alert("You Failed To Escape!")
-                let cont = +prompt("Would you like to (1) continue the game  or (2) leave?") 
+                let cont = +prompt("Would you like to (1) continue the game  or (2) leave?")
                 if (cont == 1) {
                     continue_game()
                 }
@@ -360,18 +361,18 @@ function library() {
 
         }
     }
-    
+
 }
 
 function basement() {
     alert("Welcome To The Basement!")
     alert("A Monster Roams The Basement, Try To Escape Without Getting Killed By The Monster.")
     let option = +prompt("You hear strange noises. Do you (1) investigate or (2) run away?")
-    
+
     if (option == 1){
         alert("You find the exit, but see the monster roaming around.")
         let option2 = +prompt("Do you (1) wait for the monster to leave or (2) sneak behind the monster to get to the exit?")
-        
+
         if (option2 == 1) {
            alert("The monster leaves. You reach the exit but in order to leave you need to find a key to unlock it.")
            let option3 = +prompt("Do you (1) search the basement or (2) find another exit?")
@@ -429,7 +430,7 @@ function basement() {
             if (cont == 2) {
                 alert("Thanks for playing!")
             }
-    
+
         }
 
     }
@@ -515,6 +516,7 @@ function gymnasium() {
 
     }
 }
+
 
 
 
