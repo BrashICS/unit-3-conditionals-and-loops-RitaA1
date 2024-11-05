@@ -118,8 +118,8 @@ function menu() {
     }
 
     else {
-        console.log("Select again!")
-        let selection = +prompt(`Select Again! ${message}`);
+        alert("Select again!")
+        let selection = +prompt(`${message}`);
         selection
     }
 }
