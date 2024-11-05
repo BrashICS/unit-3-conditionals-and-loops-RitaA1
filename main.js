@@ -29,47 +29,75 @@ function randInt(min, max) {
     return Math.floor(Math.random() * (max - min + 1)) + min;
 }
 
-// if statements
+// if statements practice
+
+// Part one
 function user() {
-let age = Number(prompt("what is your age"))
-if (age >= 60) {
-    console.log(`You qualify for the senior discount!`)
+    let age = Number(prompt("what is your age"))
+    if (age >= 60) {
+        console.log(`You qualify for the senior discount!`)
+    }
+
+    if (age < 16) {
+        console.log(`You're not enough to drive yet`)
+
+    }
+
+    if (age == 44) {
+        console.log("So is Mr. Squirrel!")
+    }
+
+    if (age % 2 == 0) {
+        console.log("Your age is an even number.")
+    }
+
+    if (age % 2 != 0) {
+        console.log("Your age is an odd number.")
+    }
+
+    let user_name = prompt("what is your name?")
+
+    if (user_name == "Mr. Squirrel") {
+        console.log("🐿️")
+    }
+    if (user_name.length > 7) {
+        console.log("You have a long name.")
+    }
+
+    let length = +(prompt("How many characters does your name have?"))
+    if (length == user_name.length) {
+        console.log("That's correct! ✔️")
+    }
+    if (length > user_name.length) {
+        console.log("Too high ✖️")
+    }
+
+    if (length < user_name.length) {
+        console.log("Too low ✖️")
+    }
 }
 
-if (age < 16) {
-    console.log(`You're not enough to drive yet`)
+// Part Three
+function longer_string(str1, str2) {
+    if (str1.length > str2.length) {
+        return(`${str1}`)
+    }
 
+    if (str2.length > str1.length) {
+        return(`${str2}`)
+    }
+
+    if (str1.length == str2.length) {
+        return(`They are the same length.`)
+    }
 }
 
-if (age == 44) {
-    console.log("So is Mr. Squirrel!")
-}
-
-let user_name = prompt("what is your name?")
-
-if (user_name == "Mr. Squirrel") {
-    console.log("🐿️")
-}
-if (user_name.length > 7) {
-    console.log("You have a long name.")
-}
-
-let length = +(prompt("How many characters does your name have?"))
-if (length == user_name.length) {
-    console.log("That's correct! ✔️")
-}
-if (length > user_name.length) {
-    console.log("Too high ✖️")
-}
-
-if (length < user_name.length) {
-    console.log("Too low ✖️")
-}
-}
+// Part F
 
 
-// else if statements
+// else if statement practice
 
+// Part one
 // Setup the menu
 function menu() {
     let message = `Hi! Please make a selection:
@@ -125,7 +153,7 @@ function menu() {
     }
 }
 
-
+// Part Two
 function greeting(hour) {
     if ((hour >= 0 ) && (hour <= 11)) {
         return("Good morning!")
@@ -145,6 +173,7 @@ function greeting(hour) {
 
 }
 
+// Part Three
 function two_digit() {
     let value  = randInt(1, 10)
     console.log(value)
@@ -172,7 +201,7 @@ function two_digit() {
 
 // else statement practice
 
-// Part one
+// Part One
 function is_number(num) {
     if (typeof num == "number"){
         return ("True")
