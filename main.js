@@ -95,7 +95,7 @@ function longer_string(str1, str2) {
 // Part Four 
 
 function discriminant(a,b,c) {
-    let zero = b**2 - 4*a*c
+    let zero = (b**2) - (4*a*c)
     if (zero == 0) {
         return("It has one zero")
     }
@@ -298,6 +298,7 @@ function guess_10() {
         alert("There was an error!") 
     }
 }
+
 
 
 
