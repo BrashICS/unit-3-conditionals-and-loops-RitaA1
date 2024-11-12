@@ -12,9 +12,7 @@
 'use strict';
 
 /*** Event Listeners ***/
-
 document.getElementById("guess").addEventListener("click", guess_10)
-
 
 /*** Functions ***/
 
