@@ -650,3 +650,20 @@ function gymnasium() {
 
 
 
+
+
+// While loop practices
+
+// Part one
+
+function countdown(start, stop) {
+    let count = 1
+    console.log(start)
+    while (start > stop) {
+        start -= 1
+        count += 1
+        console.log(start)
+    }
+
+    return(count)
+}
