@@ -695,3 +695,29 @@ function average(n) {
     avg = round(avg/n, 1)
     console.log(`The average is ${avg}`)
 }
+
+
+// Interlude_Strings practice
+
+// Part one 
+
+function print_reverse(str) {
+    let current_letter = str.length - 1
+    while (current_letter >= 0) {
+    console.log(str[current_letter])
+    current_letter -= 1
+    }
+    console.log(str.length[current_letter])
+}
+
+function dragons_and_goblins(str) {
+
+}
+
+function add(str) {
+
+}
+
+function add_substract(str) {
+
+}
