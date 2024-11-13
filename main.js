@@ -686,5 +686,5 @@ function average(n) {
         n -= 1
     }
 
-    console.log(` The average is ${
+    console.log(` The average is ${}`)
 }
