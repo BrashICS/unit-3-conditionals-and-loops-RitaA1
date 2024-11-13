@@ -655,36 +655,43 @@ function gymnasium() {
 // While loop practices
 
 // Part one
-
 function countdown(start, stop) {
-    let count = 1
-    console.log(start)
+    if ( start <= stop) {
+        return(-1)
+    }
+    let count = 0
     while (start > stop) {
+        console.log(start)
         start -= 1
         count += 1
-        console.log(start)
     }
-
     return(count)
 }
 
-
+// Part two
 function random_until(min, max, stop) {
+    // Error checking
+    if ( stop < min || stop > max || max <= min) {
+        return(-1)
+    }
+
     let rnd = randInt(min, max)
-    max > min 
     while ( rnd != stop) {
-        console.log(`${rnd}`)
+        console.log(rnd)
         rnd = randInt(min, max)
     }
     return(stop)
-
 }
 
+// Part three
 function average(n) {
-    while (n < 5) {
-        let value = +prompt("Please enter value:")
-        n -= 1
+    let avg = 0
+    let count = 1
+    avg = +prompt("Please enter value:")
+    while (count <= n) {
+        avg += +prompt("Please enter value:")
+        count += 1
     }
-
-    console.log(` The average is ${}`)
+    avg = round(avg/n, 1)
+    console.log(`The average is ${avg}`)
 }
