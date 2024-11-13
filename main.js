@@ -667,3 +667,24 @@ function countdown(start, stop) {
 
     return(count)
 }
+
+
+function random_until(min, max, stop) {
+    let rnd = randInt(min, max)
+    max > min 
+    while ( rnd != stop) {
+        console.log(`${rnd}`)
+        rnd = randInt(min, max)
+    }
+    return(stop)
+
+}
+
+function average(n) {
+    while (n < 5) {
+        let value = +prompt("Please enter value:")
+        n -= 1
+    }
+
+    console.log(` The average is ${
+}
