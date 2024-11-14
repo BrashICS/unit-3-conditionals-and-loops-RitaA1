@@ -700,24 +700,58 @@ function average(n) {
 // Interlude_Strings practice
 
 // Part one 
-
 function print_reverse(str) {
     let current_letter = str.length - 1
+    let output =  ""
     while (current_letter >= 0) {
-    console.log(str[current_letter])
-    current_letter -= 1
+        output += str[current_letter]
+        current_letter -= 1
     }
-    console.log(str.length[current_letter])
+    console.log(output)
 }
-
+  
+// Part two
 function dragons_and_goblins(str) {
+    let i = 0
+    let d = 0
+    let g = 0
+    while (i < str.length) {
+        if (str[i] == "d") {
+            d += 1
+        }
+        else if ( str[i] == "g") {
+            g += 1
+        }
+        i += 1
+    }
+    console.log(`Dragons: ${d} Goblins: ${g}`)
 
 }
 
+// Part three
 function add(str) {
+    let i = 0
+    let add = 0
+    while (i < str.length){
+        add = add + Number(str[i])
+        i += 1
+    }
+    console.log(add)
 
 }
 
-function add_substract(str) {
-
+// Part four
+function add_subtract(str) {
+    let i = 0
+    let add = 0 
+    while (i < str.length) {
+        if (str[i] == "-") {
+            i += 1
+            add = add - Number(str[i])
+        }
+        else 
+        add = add + Number(str[i])
+        i += 1
+    }
+    console.log(add)
 }
