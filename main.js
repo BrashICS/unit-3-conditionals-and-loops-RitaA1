@@ -756,7 +756,36 @@ function add_subtract(str) {
     console.log(add)
 }
 
+// Part five
 
+function substring(mainstring, start, stop) {
+    let output = ""
+    if (start > stop) {
+        start = stop 
+        stop = start
+    }
+    while (start <= stop) {
+        output = output + mainstring[start]
+        start += 1
+    }
+    return(output)
+}
+
+function fix_pronoun(str) {
+    let n = str[0].toUpperCase()
+    let output = ""
+    if (str[0] != str[0].toUpperCase() || str != str.toLowerCase()) {
+        output = output + n + substring(str.toLowerCase(), 1, str.length - 1)
+        console.log(output)
+    }
+}
+/*
+while (i <= str.length){
+    n = n + substring(str, str.length, str.length)
+    console.log(n + str.length)
+    i += 1
+    }
+*/
 // Do while loop practices 
 
 // Part one
