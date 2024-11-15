@@ -755,3 +755,57 @@ function add_subtract(str) {
     }
     console.log(add)
 }
+
+
+// Do while loop practices 
+
+// Part one
+
+// Build a string from user input
+function build_string() {
+    let output = "";
+    let input;
+    do {
+      input = prompt("Enter a string of text or a single 'q' to quit: ");
+      output += input;
+    
+    } while (input.toLowerCase() != "q");
+  
+    return output;
+}
+
+
+function printOdd(n) {
+  if ( n % 1 != 0 || n < 1 || isNaN(n)) {
+    return
+  }
+  let c = 1
+  do {
+    console.log(c)
+    c += 2
+    } while (c <= n && c % 2 != 0)
+}
+
+function negative_only() {
+    let input;
+    do {
+        input = +prompt(" Give a negative number.")
+    } while (input >= 0 || isNaN(input))
+    return (input)
+}
+
+function parrot() {
+    let input 
+    do {
+        input = prompt("Enter some text or the word 'quit'")
+        if (input.toLowerCase() != "quit") {
+            console.log(input.toUpperCase())
+        }
+    } while ( input.toLowerCase() != "quit")
+
+    console.log("GOODBYE 🦜")
+}
+
+function factorial(n) {
+
+}
