@@ -760,18 +760,21 @@ function add_subtract(str) {
 // Do while loop practices 
 
 // Part one
-
 // Build a string from user input
 function build_string() {
     let output = "";
     let input;
     do {
       input = prompt("Enter a string of text or a single 'q' to quit: ");
-      output += input;
-    
+      if (input.toLowerCase() != "q") {
+        output += input;
+      }
+      else {
+        return output
+      }
     } while (input.toLowerCase() != "q");
   
-    return output;
+   // return output;
 }
 
 
@@ -807,5 +810,17 @@ function parrot() {
 }
 
 function factorial(n) {
-
+    if ( n < 0 || isNaN(n)) {
+        return
+    }
+    else if (n == 0) {
+        return(1)
+    }
+    let i = 1
+    let add = 1
+    do {
+        add = i*add 
+        i += 1
+    } while (i < n) 
+    return(n*add)
 }
