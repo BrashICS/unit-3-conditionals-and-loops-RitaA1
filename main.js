@@ -763,18 +763,18 @@ function add_subtract(str) {
 // Build a string from user input
 function build_string() {
     let output = "";
+    let looping = true;
     let input;
     do {
       input = prompt("Enter a string of text or a single 'q' to quit: ");
       if (input.toLowerCase() != "q") {
         output += input;
+      } else {
+        looping = false;
       }
-      else {
-        return output
-      }
-    } while (input.toLowerCase() != "q");
+    } while (looping);
   
-   // return output;
+    return output;
 }
 
 
