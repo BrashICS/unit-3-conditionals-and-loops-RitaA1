@@ -761,8 +761,16 @@ function add_subtract(str) {
 function substring(mainstring, start, stop) {
     let output = ""
     if (start > stop) {
-        start = stop 
-        stop = start
+        let i = start
+        let k = stop
+        start = k 
+        stop = i
+    }
+    else if ( start < 0) {
+        start = 0
+    }
+    else if ( stop < 0) {
+        stop = 0
     }
     while (start <= stop) {
         output = output + mainstring[start]
@@ -779,15 +787,8 @@ function fix_pronoun(str) {
         console.log(output)
     }
 }
-/*
-while (i <= str.length){
-    n = n + substring(str, str.length, str.length)
-    console.log(n + str.length)
-    i += 1
-    }
-*/
-// Do while loop practices 
 
+// Do while loop practices 
 // Part one
 // Build a string from user input
 function build_string() {
