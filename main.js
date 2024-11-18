@@ -872,3 +872,13 @@ function print_chars(str, step) {
         console.log(str[i])
     }
     }
+
+
+// Part two
+
+function sum(n) {
+    for( let i = 1; i < n; i += 1) {
+        n += i
+    }
+    return(n)
+}
