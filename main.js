@@ -648,10 +648,6 @@ function gymnasium() {
 }
 
 
-
-
-
-
 // While loop practices
 
 // Part one
@@ -854,3 +850,4 @@ function factorial(n) {
     } while (i < n) 
     return(n*add)
 }
+
