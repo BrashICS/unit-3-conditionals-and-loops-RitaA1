@@ -851,3 +851,10 @@ function factorial(n) {
     return(n*add)
 }
 
+
+// For loop pracices
+// Part one
+
+function count_up(start, stop) {
+    for ( 
+}
