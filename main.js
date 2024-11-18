@@ -854,7 +854,6 @@ function factorial(n) {
 
 // For loop pracices
 // Part one
-
 function count_up(start, stop) {
     for ( start; start <= stop; start += 1) {
         console.log(start)
@@ -871,11 +870,10 @@ function print_chars(str, step) {
     for( let i = 0; i < str.length; i += step) {
         console.log(str[i])
     }
-    }
+}
 
 
 // Part two
-
 function sum(n) {
     let add = 0
     for(let i = 1; i <= n; i += 1) {
@@ -885,5 +883,21 @@ function sum(n) {
 }
 
 function count4(begin, end) {
-    
+    let i = 0
+    for (begin; begin <= end; begin += 1) {
+        if (begin % 4 == 0) {
+            i += 1
+        }
+    }
+    return (i)
+}
+
+function sum_divisible(n, x) {
+    let add = 0 
+    for( let i = 0; i <= n; i += 1){
+        if ( i % x == 0) {
+            add = add + i
+        }
+    }
+    return(add)
 }
