@@ -883,3 +883,7 @@ function sum(n) {
     }
     return(add)
 }
+
+function count4(begin, end) {
+    
+}
