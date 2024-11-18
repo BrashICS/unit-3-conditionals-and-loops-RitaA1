@@ -877,8 +877,9 @@ function print_chars(str, step) {
 // Part two
 
 function sum(n) {
-    for( let i = 1; i < n; i += 1) {
-        n += i
+    let add = 0
+    for(let i = 1; i <= n; i += 1) {
+        add += i
     }
-    return(n)
+    return(add)
 }
