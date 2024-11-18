@@ -856,5 +856,19 @@ function factorial(n) {
 // Part one
 
 function count_up(start, stop) {
-    for ( 
+    for ( start; start <= stop; start += 1) {
+        console.log(start)
+    }
 }
+
+function count_down(start, stop) {
+    for ( start; start >= stop; start -= 1) {
+        console.log(start)
+    }
+}
+
+function print_chars(str, step) {
+    for( let i = 0; i < str.length; i += step) {
+        console.log(str[i])
+    }
+    }
