@@ -969,11 +969,19 @@ function tail(str, n) {
 }
 
 function print_line(char, width){
-
+    let output = ""
+    for( let i = 1; i <= width; i++) {
+        output = output + char
+    }
+    return(output)
 }
 
 function print_rectangle(char, height, width){
-
+    let output = ""
+    for (let i = 1; i <= height; i++){
+        output = print_line(char, width) 
+        console.log(output)
+    }
 }
 
 function fib_sequence(n){
