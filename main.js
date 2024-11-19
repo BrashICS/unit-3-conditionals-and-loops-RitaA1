@@ -893,11 +893,64 @@ function count4(begin, end) {
 }
 
 function sum_divisible(n, x) {
-    let add = 0 
-    for( let i = 0; i <= n; i += 1){
+    let sum = 0 
+    for( let i = x; i <= n; i += 1){
         if ( i % x == 0) {
-            add = add + i
+            sum = sum + i
         }
     }
+    return(sum)
+}
+
+function sum_divisible2(n, x) {
+    let sum = 0 
+    for( let i = x; i <= n; i += x){
+        sum = sum + i
+    }
+    return(sum)
+}
+
+function count_char(str, char) {
+    let add = 0
+    for (let i = 0; i <= str.length - 1; i += 1){
+        if (str[i] == char){
+            add += 1
+        } 
+    }
+    if ( add == 0) {
+        return(-1)
+    }
     return(add)
+}
+
+function print_codes(str) {
+    for( let i = 0; i <= str.length - 1; i += 1){
+        console.log(str.charCodeAt(i))
+    }
+}
+
+function determine_case(c) {
+    if (c.charCodeAt(0) >= 65 && c.charCodeAt(0) <= 90) {
+        return("U")
+    }
+
+    else if (c.charCodeAt(0) >= 97 && c.charCodeAt(0) <= 122) {
+        return("L")
+    }
+
+    else if ( c.charCodeAt(0) >= 48 && c.charCodeAt(0) <= 57) {
+        return("N")
+    }
+
+    else {
+        return("S")
+    }
+}
+
+function print_case(str) {
+    let output = " "
+    for(let i = 0; i < str.length; i++){
+        output = output + determine_case(str[i])
+    }
+    return (output)
 }
