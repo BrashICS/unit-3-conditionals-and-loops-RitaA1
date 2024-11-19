@@ -954,3 +954,32 @@ function print_case(str) {
     }
     return (output)
 }
+
+function tail(str, n) {
+    if ( n < 0 || isNaN(n) || n > str.length) {
+        return(-1)
+    }
+    let output = ""
+    let i = str.length - n
+    for( let a = n;  a != 0; a--){
+        output = output + str[i]
+        i = i + 1
+    }
+    return(output)
+}
+
+function print_line(char, width){
+
+}
+
+function print_rectangle(char, height, width){
+
+}
+
+function fib_sequence(n){
+
+}
+
+function squirrel_crypt(str){
+
+}
