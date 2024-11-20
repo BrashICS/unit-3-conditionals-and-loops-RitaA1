@@ -985,8 +985,52 @@ function print_rectangle(char, height, width){
 }
 
 function fib_sequence(n){
+    let output = " "
+    let x = 0
+    let g = 1
+    let c = x 
+    let d = 0
+    for (let i = 1; i <= n; i++ ) {
+        output += `${x},`
+        if (x < 1) {
+        x++
+        }
 
+        else if (x == 1) {
+            x  = g + d
+            d += 1
+
+        }
+        else if (x < 2){
+            g += 1
+            c += 1
+            x = g + c
+        }   
+
+        else  {
+         g = x
+         c = g
+          x = (x - g) + c
+        }
+        
+        
+    }
+    return(output)
 }
+
+function fib_(n) {
+    let output = ""
+    let x = 0 
+    
+    for ( let i = 0; i < n; i++) {
+       output += `${x}`
+       x += 1
+        x += x
+    }
+    
+    return (output)
+}
+
 
 function squirrel_crypt(str){
 
