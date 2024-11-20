@@ -990,6 +990,7 @@ function fib_sequence(n){
     let g = 1
     let c = x 
     let d = 0
+    let e = 1
     for (let i = 1; i <= n; i++ ) {
         output += `${x},`
         if (x < 1) {
@@ -1006,13 +1007,13 @@ function fib_sequence(n){
             c += 1
             x = g + c
         }   
-
         else  {
-         g = x
-         c = g
-          x = (x - g) + c
+         e = x
+         x += x 
+         x = x - e
+         /*g += x
+          x = (x - g) + c */
         }
-        
         
     }
     return(output)
