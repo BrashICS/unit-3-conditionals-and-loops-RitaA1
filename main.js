@@ -1040,7 +1040,7 @@ function squirrel_crypt(str){
 function bouncer2(guests, night) {
     let n = 0 
     let k = 0
-    for( let i = 0; i <= night.length; i++){
+    for( let i = 0; i < night.length; i++){
         if (night[i] == "+") {
             k++
         }
@@ -1054,16 +1054,16 @@ function bouncer2(guests, night) {
         return(output)
     }
 
-    else if ( guests >= 0 && guests <= 350 && 350 - guests < k ) {
-        let output2 = ((350 - guests) * 15.75) + (((k -( 350 - guests)) - ( n - k))* 15.75)
-        return(output2)
+    else if (guests >= 0 && guests <= 350 && 350 - guests < k ) {
+        if ((k-(350 - guests)) >= n) {
+            let output2 = ((350 - guests) * 15.75) + ((k -( 350 - guests)) - ((k -( 350 - guests)) - n))*15.75
+            return(output2)
+        }
+
+        else if ((k-(350 - guests)) <= n){
+            let output3 = ((350 - guests) * 15.75) + ((n) - (n - (k -( 350 - guests))))*15.75
+            return(output3)      
+        }
     }
 
-    else if ( guests >= 0 && guests <= 350 && (k - ( 350 - guests)) >= n) {
-
-    else {
-        let output2 = ((350 - guests) * 15.75) + (((k -( 350 - guests)) - ( n - k))* 15.75)
-        return(output2)
-    }
-  
 }
