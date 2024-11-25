@@ -1036,3 +1036,34 @@ function fib_(n) {
 function squirrel_crypt(str){
 
 }
+
+function bouncer2(guests, night) {
+    let n = 0 
+    let k = 0
+    for( let i = 0; i <= night.length; i++){
+        if (night[i] == "+") {
+            k++
+        }
+        else if (night[i] == "-"){
+            n++
+        }
+    }   
+    let g = k - (350 - guests)
+    if ( guests >= 0 && guests <= 350 && 350 - guests >= k) {
+        let output = k * 15.75
+        return(output)
+    }
+
+    else if ( guests >= 0 && guests <= 350 && 350 - guests < k ) {
+        let output2 = ((350 - guests) * 15.75) + (((k -( 350 - guests)) - ( n - k))* 15.75)
+        return(output2)
+    }
+
+    else if ( guests >= 0 && guests <= 350 && (k - ( 350 - guests)) >= n) {
+
+    else {
+        let output2 = ((350 - guests) * 15.75) + (((k -( 350 - guests)) - ( n - k))* 15.75)
+        return(output2)
+    }
+  
+}
