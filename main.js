@@ -1048,12 +1048,10 @@ function bouncer2(guests, night) {
             n++
         }
     }   
-    let g = k - (350 - guests)
     if ( guests >= 0 && guests <= 350 && 350 - guests >= k) {
         let output = k * 15.75
         return(output)
     }
-
     else if (guests >= 0 && guests <= 350 && 350 - guests < k ) {
         if ((k-(350 - guests)) >= n) {
             let output2 = ((350 - guests) * 15.75) + ((k -( 350 - guests)) - ((k -( 350 - guests)) - n))*15.75
@@ -1066,4 +1064,53 @@ function bouncer2(guests, night) {
         }
     }
 
+}
+
+
+function word_builder2(){
+    let output = ""
+    let letter = prompt("Letter?")
+    while( letter != "" || letter != " ") {
+        if (letter == ""  || letter == null || letter == " "){
+            console.log(`Final Word: ${output}`)
+            return (`Final Word: ${output}`)
+        }
+        else {
+            output = output + letter[0]
+            console.log(`Current Word: ${output}`)
+            letter = prompt("Letter?")
+
+        }
+    } 
+}
+
+function toHobbitCase(str){
+    let output = ""
+    for(let i = 0; i < str.length; i++){
+        if ( i % 2 == 0) 
+            output = output + str[i].toUpperCase()
+
+        else if (i % 2 != 0){
+            output = output + str[i].toLowerCase()
+        }
+    }
+    return(output)
+}
+
+function reverse_sentence(message) {
+    let output = ""
+    let k = 0
+    for(let i = message.length - 1; i >= 0; i--){
+        if (message[i] == " " || message[i] == ","){
+           for( let n = message[i] - 1; n >= 0; n--){
+                output = output + " " + n 
+           }
+        }
+        else {
+            k++
+            //output = output + message[i]
+        }
+    }
+    
+    return(output)
 }
