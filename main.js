@@ -754,7 +754,7 @@ function add_subtract(str) {
 
 // Part five
 
-function substring(mainstring, start, stop) {
+function substring1(mainstring, start, stop) {
     let output = ""
     if (start > stop) {
         let i = start
@@ -1037,7 +1037,8 @@ function squirrel_crypt(str){
 
 }
 
-function bouncer2(guests, night) {
+/*
+function print2(guests, night) {
     let n = 0 
     let k = 0
     for( let i = 0; i < night.length; i++){
@@ -1066,8 +1067,9 @@ function bouncer2(guests, night) {
 
 }
 
-
-function word_builder2(){
+*/
+/*
+function builder2(){
     let output = ""
     let letter = prompt("Letter?")
     while( letter != "" || letter != " ") {
@@ -1084,7 +1086,10 @@ function word_builder2(){
     } 
 }
 
-function toHobbitCase(str){
+*/
+
+/*
+function Case(str){
     let output = ""
     for(let i = 0; i < str.length; i++){
         if ( i % 2 == 0) 
@@ -1096,8 +1101,10 @@ function toHobbitCase(str){
     }
     return(output)
 }
+*/ 
 
-function reverse_sentence(message) {
+/*
+function sentence(message) {
     let output = ""
     let k = 0
     for(let i = message.length - 1; i >= 0; i--){
@@ -1113,4 +1120,38 @@ function reverse_sentence(message) {
     }
     
     return(output)
+}
+*/
+
+
+function substring(mainstring, start, stop) {
+    let output = ""
+    if (start > stop) {
+        let i = start
+        let k = stop
+        start = k 
+        stop = i
+    }
+    else if ( start < 0) {
+        start = 0
+    }
+    else if ( stop < 0) {
+        stop = 0
+    }
+    while (start <= stop) {
+        output = output + mainstring[start]
+        start += 1
+    }
+    return(output)
+}
+function reverse_sentence(message) {
+    let output2 = ""
+    for(let i = message.length - 1; i > 0; i--){
+        if (message[i] == ","){
+            console.log(`g`)
+            output2 = output2 + substring(message,4, message.length - 1)
+            
+        }
+    }
+
 }
