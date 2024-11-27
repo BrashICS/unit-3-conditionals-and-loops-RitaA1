@@ -1144,14 +1144,47 @@ function substring(mainstring, start, stop) {
     }
     return(output)
 }
+
+function substring1(mainstring, start, stop) {
+    let output = ""
+    if (start > stop) {
+        let i = start
+        let k = stop
+        start = k 
+        stop = i
+    }
+    else if ( start < 0) {
+        start = 0
+    }
+    else if ( stop < 0) {
+        stop = 0
+    }
+    while (start <= stop) {
+        output = output + mainstring[start]
+        start += 1
+    }
+    return(output)
+}
+
 function reverse_sentence(message) {
-    let output2 = ""
+    let output = ""
     for(let i = message.length - 1; i > 0; i--){
         if (message[i] == ","){
-            console.log(`g`)
-            output2 = output2 + substring(message,4, message.length - 1)
-            
+            console.log(8)
+            let start = i + 1
+            let stop = message.charCodeAt(44)
+            while(  start < message.length || message[start] != "," ){
+                if (message.charCodeAt(start) == stop || start == message.length || message[start] == ","){
+                    console.log = 6
+                }
+                else {
+                    output = output + message[start]
+                    start = start + 1
+                    console.log(9)
+                }
+            }
         }
+        console.log(7)
     }
-
+    return(output)
 }
