@@ -1103,70 +1103,10 @@ function Case(str){
 }
 */ 
 
+
+
 /*
-function sentence(message) {
-    let output = ""
-    let k = 0
-    for(let i = message.length - 1; i >= 0; i--){
-        if (message[i] == " " || message[i] == ","){
-           for( let n = message[i] - 1; n >= 0; n--){
-                output = output + " " + n 
-           }
-        }
-        else {
-            k++
-            //output = output + message[i]
-        }
-    }
-    
-    return(output)
-}
-*/
-
-
-function substring(mainstring, start, stop) {
-    let output = ""
-    if (start > stop) {
-        let i = start
-        let k = stop
-        start = k 
-        stop = i
-    }
-    else if ( start < 0) {
-        start = 0
-    }
-    else if ( stop < 0) {
-        stop = 0
-    }
-    while (start <= stop) {
-        output = output + mainstring[start]
-        start += 1
-    }
-    return(output)
-}
-
-function substring1(mainstring, start, stop) {
-    let output = ""
-    if (start > stop) {
-        let i = start
-        let k = stop
-        start = k 
-        stop = i
-    }
-    else if ( start < 0) {
-        start = 0
-    }
-    else if ( stop < 0) {
-        stop = 0
-    }
-    while (start <= stop) {
-        output = output + mainstring[start]
-        start += 1
-    }
-    return(output)
-}
-
-function reverse_sentence(message) {
+function primt6(message) {
     let output = ""
     for(let i = message.length - 1; i > 0; i--){
         if (message[i] == ","){
@@ -1204,20 +1144,5 @@ function sentence(message){
     output += word
     return (output)
 }   
+*/
 
-function sentence3(message){
-    let output = ""
-    let word = ""
-    for (let i = message.length - 1; i >= 0; i--){
-        if (message[i] == ","){
-            word = message[i] + word
-            output = output + word + " "
-            word = ""
-        }
-        else {
-            word = message[i] + word
-        }
-    }
-    output += word
-    return (output)
-}   
