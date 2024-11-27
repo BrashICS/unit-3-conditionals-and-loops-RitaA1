@@ -1188,3 +1188,36 @@ function reverse_sentence(message) {
     }
     return(output)
 }
+
+function sentence(message){
+    let output = ""
+    let word = ""
+    for (let i = message.length - 1; i >= 0; i--){
+        if (message[i] != ","){
+            word = message[i] + word
+        }
+        else {
+            output = output + word + " "
+            word = ""
+        }
+    }
+    output += word
+    return (output)
+}   
+
+function sentence3(message){
+    let output = ""
+    let word = ""
+    for (let i = message.length - 1; i >= 0; i--){
+        if (message[i] == ","){
+            word = message[i] + word
+            output = output + word + " "
+            word = ""
+        }
+        else {
+            word = message[i] + word
+        }
+    }
+    output += word
+    return (output)
+}   
