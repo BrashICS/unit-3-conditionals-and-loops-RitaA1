@@ -1036,3 +1036,20 @@ function fib_(n) {
 function squirrel_crypt(str){
 
 }
+
+
+function hero3(arrows, enemies){
+    for (let  i = 0; i < enemies.length; i++){
+        if (live_or_die(arrows, enemies[i])){
+            arrows -= enemies
+        }
+        else {
+            return false
+        }
+    }
+    return true
+}
+
+function live_or_die(arrows, hp){
+    return(arrows >= hp)
+}
