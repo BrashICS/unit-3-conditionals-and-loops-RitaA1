@@ -1,13 +1,11 @@
 /*
-  style.css
+  style.css 
   Feel free to change this CSS for your own purposes
 */
 
 /* Using font-size: larger to make things pop. Feel free to change. */
-body {
-    background-color:#36013F;
+/* html body {
     color: white;
-    margin: 30px;
     font-size: x-large;
 }
 
@@ -24,4 +22,59 @@ h6 {
 h3 {
     text-decoration: underline;
     font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+} */
+
+
+html body{
+    height: 100%;
+    margin: 0;
+    text-align: center;
+
+
+}
+
+/* style for the background of the game. */
+#bg {
+    position:absolute;
+    min-width:100%;
+    min-height: 100%; 
+    background-image: url("./image/spooky.jpg");  
+    background-size: cover; 
+    background-repeat: no-repeat; 
+    background-position:  center; 
+}
+
+/*style for the title of the game */
+#title {
+    font-size: 70px;
+    margin-top:22%;
+    color: rgb(0, 0, 0); 
+}
+
+/* style for the start button of the game. */
+#start_game {
+    padding-right: 10px;
+    border-radius: 0.8rem;
+    border-style: solid;
+    background: rgb(70, 54, 208);
+    border-color: black;
+    font-size: 32px;
+}
+
+#start_game:hover {
+    background: linear-gradient(to right,  rgb(10, 15, 45) 0%, rgb(70, 54, 208) 100%);
+
+}
+
+
+/* Style for the guess button */
+#guess {
+    margin-top: 2%;
+    padding-right: 10px;
+    border-radius: 0.8rem;
+    border-style: solid;
+    background: rgb(162, 54, 208);
+    border-color: black;
+    font-size: 16px;
+
 }
